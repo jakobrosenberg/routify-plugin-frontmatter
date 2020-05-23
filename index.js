@@ -2,7 +2,7 @@ const YAML = require('yaml')
 const defaults = { extensions: ['md', 'svx'] }
 
 module.exports = function (middlewares, pl, options) {
-    options = { defaults, ...options }
+    options = { ...defaults, ...options }
     
     // insert frontmatter metadata after meta is created
     const index = middlewares.findIndex(mw => mw.name === 'applyMetaToFiles')
