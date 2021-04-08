@@ -8,7 +8,7 @@ module.exports = function (middlewares, pl, options) {
     const index = middlewares.findIndex(mw => mw.name === 'applyMetaToFiles')
     middlewares.splice(index + 1, 0, {
         name: "routify-plugin-frontmatter",
-        middleware: middleware
+        middleware
     })
 
     return middlewares
